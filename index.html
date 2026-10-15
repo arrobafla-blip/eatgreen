@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f2b">
+  <meta name="description" content="Eat Green — alimentação fresca para facilitar sua rotina.">
+  <title>Eat Green | Fresco, prático, do seu jeito</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Eat Green - início">
+      <span class="brand-mark" aria-hidden="true">eg</span>
+      <span>eat<span class="brand-green">green</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav id="mainNav" class="main-nav">
+      <a href="#clube">Clube</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#contato">Contato</a>
+      <a class="nav-cta" href="#pedido">Quero pedir</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> FRESCOR QUE ACOMPANHA SUA ROTINA</p>
+        <h1>Comer bem pode ser <em>mais simples.</em></h1>
+        <p class="hero-text">Opções frescas e práticas para deixar espaço na sua rotina para o que importa — sem complicar suas escolhas.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#cardapio">Conheça o cardápio <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#clube">Descubra o Clube Eat Green</a>
+        </div>
+        <p class="small-note">Delivery · Produtos e disponibilidade sob confirmação</p>
+      </div>
+      <div class="hero-art" aria-label="Ilustração de uma tigela com folhas e vegetais frescos" role="img">
+        <div class="sun-shape"></div>
+        <div class="art-label">fresco<br>na sua rotina</div>
+        <div class="bowl">
+          <div class="leaf leaf-a"></div><div class="leaf leaf-b"></div><div class="leaf leaf-c"></div>
+          <div class="tomato tomato-a"></div><div class="tomato tomato-b"></div>
+          <div class="carrot"></div><div class="seed seed-a"></div><div class="seed seed-b"></div>
+        </div>
+        <div class="art-caption">SIMPLES. FRESCO. EAT GREEN.</div>
+      </div>
+    </section>
+
+    <section class="value-strip">
+      <div><span class="value-number">01</span><span><strong>Praticidade</strong><small>Mais facilidade no dia a dia</small></span></div>
+      <div><span class="value-number">02</span><span><strong>Frescor</strong><small>Produtos preparados para você</small></span></div>
+      <div><span class="value-number">03</span><span><strong>Flexibilidade</strong><small>Pedidos avulsos ou planos</small></span></div>
+    </section>
+
+    <section class="section-wrap section-block" id="clube">
+      <div class="section-heading">
+        <div><p class="eyebrow">CLUBE EAT GREEN</p><h2>Seu frescor, com <em>mais constância.</em></h2></div>
+        <p class="section-intro">Uma proposta de assinatura para quem quer planejar melhor a rotina. Os formatos abaixo são exploratórios e serão confirmados após o piloto.</p>
+      </div>
+      <div class="plan-grid" id="plansGrid" aria-live="polite"></div>
+      <p class="disclaimer">Planos, preços, itens, frequência de entrega e condições ainda estão em validação. Consulte a disponibilidade antes de contratar.</p>
+    </section>
+
+    <section class="menu-section" id="cardapio">
+      <div class="section-wrap section-block">
+        <div class="section-heading">
+          <div><p class="eyebrow">CARDÁPIO</p><h2>Escolhas frescas para <em>hoje.</em></h2></div>
+          <p class="section-intro">Veja as opções em teste. Ingredientes, tamanhos, preços e disponibilidade serão publicados após confirmação.</p>
+        </div>
+        <div class="filter-row">
+          <span class="filter-label">EXPLORE AS OPÇÕES</span>
+          <div class="filter-buttons" id="categoryFilters"></div>
+        </div>
+        <div class="product-grid" id="productsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="how-section section-wrap section-block" id="como-funciona">
+      <p class="eyebrow">SEM COMPLICAÇÃO</p>
+      <h2>Como funciona <em>por enquanto.</em></h2>
+      <div class="steps-grid">
+        <article class="step"><span>01</span><h3>Escolha</h3><p>Explore o cardápio ou manifeste interesse em um plano do Clube.</p></article>
+        <article class="step"><span>02</span><h3>Confirme</h3><p>Envie sua solicitação pelo WhatsApp. A equipe confirma preço, itens e disponibilidade.</p></article>
+        <article class="step"><span>03</span><h3>Combine a entrega</h3><p>Pagamento, área atendida, prazo e entrega serão combinados diretamente antes da confirmação.</p></article>
+      </div>
+      <div class="notice"><strong>Importante:</strong> esta versão não processa pagamentos, não confirma pedidos automaticamente e não faz cobrança recorrente. O atendimento é manual.</div>
+    </section>
+
+    <section class="order-section" id="pedido">
+      <div class="section-wrap order-inner">
+        <div><p class="eyebrow">VAMOS CONVERSAR?</p><h2>Seu próximo passo<br>começa <em>por aqui.</em></h2><p>Conte o que você procura. Vamos confirmar as opções disponíveis e os próximos passos.</p></div>
+        <div class="order-card"><div class="order-icon">↗</div><h3>Peça ou tire dúvidas</h3><p>Fale com a Eat Green pelo WhatsApp para consultar cardápio, planos e área de entrega.</p><a class="button button-light" id="mainWhatsApp" href="#" target="_blank" rel="noopener">Abrir WhatsApp</a><small>O número de atendimento precisa ser configurado no arquivo <code>config.js</code>.</small></div>
+      </div>
+    </section>
+
+    <section class="contact-section section-wrap section-block" id="contato">
+      <div><p class="eyebrow">CONTATO</p><h2>Estamos por <em>perto.</em></h2></div>
+      <div class="contact-details"><p><span>WhatsApp</span><a id="contactWhatsApp" href="#">Configurar número de atendimento</a></p><p><span>Instagram</span><a id="instagramLink" href="#" target="_blank" rel="noopener">Configurar perfil da marca</a></p><p><span>Área de entrega</span><strong id="deliveryArea">Informação pendente</strong></p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark">eg</span><span>eat<span class="brand-green">green</span></span></a><p>Frescor que acompanha sua rotina.</p><small>© <span id="year"></span> Eat Green. Informações comerciais sujeitas à confirmação.</small></footer>
+  <script src="./config.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

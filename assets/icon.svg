@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="120" fill="#173f2b"/>
+  <path d="M125 288c0-105 83-169 227-164-3 126-68 216-169 216-34 0-58-21-58-52Z" fill="#c8df8c"/>
+  <path d="M147 355c46-80 103-131 180-177" fill="none" stroke="#34784a" stroke-width="20" stroke-linecap="round"/>
+  <text x="256" y="448" font-family="Arial,sans-serif" font-size="70" font-weight="700" text-anchor="middle" fill="#fffef9">eg</text>
+</svg>
