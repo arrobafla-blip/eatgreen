@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ideias simples para comer melhor: dicas práticas e receitas com legumes, verduras e ingredientes frescos da Eat Green.">
+  <title>Dicas & Receitas | Eat Green</title>
+  <style>
+    :root {
+      --green: #244b38;
+      --green-dark: #173628;
+      --green-soft: #e8eee5;
+      --cream: #f7f5ee;
+      --paper: #fffdf8;
+      --ink: #242923;
+      --muted: #6d756c;
+      --line: #dce2d8;
+      --accent: #d9e6b5;
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--cream); font-family: Inter, "Helvetica Neue", Arial, sans-serif; line-height: 1.65; }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header { background: var(--paper); border-bottom: 1px solid var(--line); }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { color: var(--green); font-size: 1.12rem; font-weight: 850; letter-spacing: .11em; text-decoration: none; }
+    .nav-links { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; }
+    .nav-links a { font-size: .9rem; text-decoration: none; }
+    .nav-links a:hover { color: var(--green); }
+    .button { display: inline-flex; justify-content: center; align-items: center; padding: 12px 18px; border-radius: 999px; background: var(--green); color: white !important; text-decoration: none; font-size: .9rem; font-weight: 700; transition: transform .2s, background .2s; }
+    .button:hover { background: var(--green-dark); transform: translateY(-2px); }
+    .hero { padding: 82px 0 70px; background: var(--green-soft); }
+    .eyebrow { color: var(--green); text-transform: uppercase; letter-spacing: .16em; font-size: .73rem; font-weight: 800; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 760px; margin: 14px 0 20px; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.7rem, 7vw, 5.5rem); font-weight: 500; letter-spacing: -.055em; line-height: .99; }
+    .hero p { max-width: 600px; font-size: 1.12rem; color: #4f5a50; }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+    .button.outline { color: var(--green) !important; background: transparent; border: 1px solid #a8b7a6; }
+    section { padding: 72px 0; }
+    .section-heading { max-width: 680px; margin-bottom: 30px; }
+    h2 { color: var(--green-dark); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 4vw, 3.25rem); line-height: 1.08; letter-spacing: -.035em; font-weight: 500; margin-bottom: 14px; }
+    .lead { color: var(--muted); font-size: 1.05rem; }
+    .tips { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .tip, .recipe { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+    .tip { padding: 25px; }
+    .number { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: var(--green-dark); font-weight: 800; margin-bottom: 16px; }
+    h3 { color: var(--green-dark); font-size: 1.15rem; margin-bottom: 8px; }
+    .tip p, .recipe p { color: var(--muted); margin-bottom: 0; }
+    .recipes-section { background: #eef1e9; }
+    .recipes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .recipe-content { padding: 26px; }
+    .recipe-tag { display: inline-block; margin-bottom: 12px; color: var(--green); font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; }
+    .recipe h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 500; font-size: 1.65rem; }
+    .recipe-meta { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0 22px; color: var(--green); font-size: .83rem; font-weight: 700; }
+    .recipe-details { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 18px; }
+    .recipe-details h4 { color: var(--green-dark); font-size: .83rem; text-transform: uppercase; letter-spacing: .08em; margin: 0 0 9px; }
+    ul, ol { padding-left: 20px; margin: 0; }
+    li { padding: 2px 0; }
+    .note { background: var(--paper); border-left: 4px solid var(--green); padding: 18px 22px; margin-top: 24px; border-radius: 0 12px 12px 0; color: var(--muted); }
+    .cta { background: var(--green); color: white; text-align: center; }
+    .cta .eyebrow, .cta h2 { color: white; }
+    .cta p { max-width: 600px; margin: 0 auto 24px; color: #e1e9df; }
+    .cta .button { color: var(--green-dark) !important; background: var(--accent); }
+    footer { padding: 28px 0; background: var(--paper); color: var(--muted); font-size: .85rem; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+    footer a { color: var(--green); text-decoration: none; }
+    @media (max-width: 760px) {
+      .nav { padding: 18px 0; align-items: flex-start; flex-direction: column; gap: 14px; }
+      .nav-links { gap: 12px 16px; }
+      .hero { padding: 60px 0 54px; }
+      section { padding: 54px 0; }
+      .tips, .recipes { grid-template-columns: 1fr; }
+      .recipe-details { grid-template-columns: 1fr; gap: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="index.html" aria-label="Eat Green — página inicial">eat green</a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="#alimentacao">Alimentação</a>
+        <a href="#receitas">Receitas</a>
+        <a class="button" href="index.html#contato">Conheça a Eat Green ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Um espaço para inspirar sua rotina</div>
+        <h1>Comer bem pode ser mais simples.</h1>
+        <p>Pequenas ideias, ingredientes frescos e receitas descomplicadas para colocar mais cor no prato — sem exigir horas na cozinha.</p>
+        <div class="hero-actions">
+          <a class="button" href="#receitas">Explorar receitas ↓</a>
+          <a class="button outline" href="#alimentacao">Dicas para o dia a dia</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="alimentacao">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">Hábitos possíveis, não perfeição</div>
+          <h2>Uma alimentação mais colorida começa com escolhas simples.</h2>
+          <p class="lead">Não precisa mudar tudo de uma vez. Experimente incluir variedade, planejar alguns ingredientes e encontrar preparos que funcionem para a sua rotina.</p>
+        </div>
+        <div class="tips">
+          <article class="tip">
+            <span class="number">01</span>
+            <h3>Varie as cores do prato</h3>
+            <p>Combine verduras e legumes de diferentes cores e texturas. Variar os alimentos ao longo da semana ajuda a diversificar os nutrientes da alimentação.</p>
+          </article>
+          <article class="tip">
+            <span class="number">02</span>
+            <h3>Deixe o fácil à mão</h3>
+            <p>Ter vegetais lavados e armazenados corretamente pode facilitar o preparo de saladas, sanduíches, omeletes e acompanhamentos rápidos.</p>
+          </article>
+          <article class="tip">
+            <span class="number">03</span>
+            <h3>Comece por uma refeição</h3>
+            <p>Escolha um momento do dia para acrescentar uma salada ou um legume preparado do seu jeito. Pequenos passos podem ajudar a construir uma rotina sustentável.</p>
+          </article>
+          <article class="tip">
+            <span class="number">04</span>
+            <h3>Use diferentes preparos</h3>
+            <p>Se não gosta de um vegetal cru, experimente assado, refogado, grelhado ou em uma sopa. A textura e o tempero fazem diferença.</p>
+          </article>
+          <article class="tip">
+            <span class="number">05</span>
+            <h3>Tempere com simplicidade</h3>
+            <p>Limão, azeite, ervas, alho e especiarias ajudam a variar o sabor. Prepare o molho à parte se quiser controlar a quantidade usada.</p>
+          </article>
+          <article class="tip">
+            <span class="number">06</span>
+            <h3>Planeje sem rigidez</h3>
+            <p>Pense em dois ou três preparos que possam render combinações diferentes durante a semana. E deixe espaço para adaptar o plano à vida real.</p>
+          </article>
+        </div>
+        <div class="note"><strong>Uma observação importante:</strong> alimentação saudável não precisa ser perfeita nem igual para todo mundo. Necessidades alimentares variam; para orientações individualizadas, procure um nutricionista.</div>
+      </div>
+    </section>
+
+    <section class="recipes-section" id="receitas">
+      <div class="wrap">
+        <div class="section-heading">
+          <div class="eyebrow">Receitas para salvar</div>
+          <h2>Ideias frescas para variar o cardápio.</h2>
+          <p class="lead">Receitas simples, com ingredientes fáceis de encontrar e sugestões que podem ser adaptadas ao que você já tem em casa.</p>
+        </div>
+        <div class="recipes">
+          <article class="recipe">
+            <div class="recipe-content">
+              <span class="recipe-tag">Sem complicação · Salada</span>
+              <h3>Salada crocante com molho de limão</h3>
+              <p>Uma combinação fresca para acompanhar o almoço ou completar um sanduíche.</p>
+              <div class="recipe-meta"><span>⏱ 10 min</span><span>🍽 2 porções</span></div>
+              <div class="recipe-details">
+                <div><h4>Ingredientes</h4><ul><li>Folhas de rúcula ou alface</li><li>1 cenoura ralada</li><li>½ pepino em fatias</li><li>Suco de ½ limão</li><li>1 colher (sopa) de azeite</li><li>Sal e pimenta a gosto</li></ul></div>
+                <div><h4>Como preparar</h4><ol><li>Lave e seque bem os vegetais, se ainda não estiverem prontos para consumo.</li><li>Disponha as folhas, a cenoura e o pepino em uma tigela.</li><li>Misture limão, azeite e temperos. Adicione na hora de servir.</li></ol></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="recipe">
+            <div class="recipe-content">
+              <span class="recipe-tag">Forno · Acompanhamento</span>
+              <h3>Legumes assados com ervas</h3>
+              <p>Uma opção versátil para preparar uma vez e combinar com diferentes refeições.</p>
+              <div class="recipe-meta"><span>⏱ 35–45 min</span><span>🍽 3–4 porções</span></div>
+              <div class="recipe-details">
+                <div><h4>Ingredientes</h4><ul><li>1 abobrinha em cubos</li><li>1 cenoura em rodelas</li><li>1 cebola em pétalas</li><li>1–2 colheres (sopa) de azeite</li><li>Orégano ou alecrim</li><li>Sal e pimenta a gosto</li></ul></div>
+                <div><h4>Como preparar</h4><ol><li>Aqueça o forno a 200 °C.</li><li>Misture os legumes com azeite e temperos em uma assadeira.</li><li>Asse por 25–35 minutos, mexendo na metade do tempo, até dourarem e ficarem macios.</li></ol></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="recipe">
+            <div class="recipe-content">
+              <span class="recipe-tag">Panela · Refeição rápida</span>
+              <h3>Omelete verde com abobrinha</h3>
+              <p>Uma ideia prática para aproveitar vegetais e montar uma refeição sem muita louça.</p>
+              <div class="recipe-meta"><span>⏱ 15 min</span><span>🍽 1–2 porções</span></div>
+              <div class="recipe-details">
+                <div><h4>Ingredientes</h4><ul><li>2 ovos</li><li>½ abobrinha ralada</li><li>Um punhado de espinafre picado</li><li>1 colher (sopa) de cebola picada</li><li>Azeite, sal e pimenta</li></ul></div>
+                <div><h4>Como preparar</h4><ol><li>Refogue a cebola e a abobrinha com um fio de azeite por alguns minutos.</li><li>Junte o espinafre e mexa até murchar.</li><li>Adicione os ovos batidos e cozinhe em fogo baixo até firmar, virando com cuidado se desejar.</li></ol></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="recipe">
+            <div class="recipe-content">
+              <span class="recipe-tag">Fresco · Sem fogão</span>
+              <h3>Wrap de folhas e legumes</h3>
+              <p>Uma opção para o almoço rápido ou para levar, com recheio fácil de adaptar.</p>
+              <div class="recipe-meta"><span>⏱ 10 min</span><span>🍽 2 unidades</span></div>
+              <div class="recipe-details">
+                <div><h4>Ingredientes</h4><ul><li>2 discos de wrap</li><li>Folhas de rúcula ou alface</li><li>Cenoura ralada</li><li>Pepino em tiras</li><li>Frango desfiado, grão-de-bico ou queijo (opcional)</li><li>Molho de iogurte ou homus</li></ul></div>
+                <div><h4>Como preparar</h4><ol><li>Espalhe uma camada fina de molho no wrap.</li><li>Distribua as folhas, os legumes e o recheio escolhido.</li><li>Dobre as laterais, enrole e sirva. Evite rechear demais para facilitar na hora de fechar.</li></ol></div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="note"><strong>Dica de conservação:</strong> mantenha os alimentos refrigerados conforme as orientações da embalagem e evite deixar ingredientes perecíveis por muito tempo fora da geladeira. Siga também as instruções de higienização e preparo seguro dos alimentos.</div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <div class="eyebrow">Frescor que acompanha sua rotina</div>
+        <h2>Mais praticidade para colocar essas ideias em ação.</h2>
+        <p>Conheça as opções da Eat Green e consulte pelo nosso canal de atendimento os produtos disponíveis, os formatos de entrega e as condições atuais.</p>
+        <a class="button" href="index.html#contato">Conheça a Eat Green ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <a class="brand" href="index.html">eat green</a>
+      <span>Fresco, prático, do seu jeito.</span>
+      <a href="index.html">Voltar para o site principal ↑</a>
+    </div>
+  </footer>
+</body>
+</html>
