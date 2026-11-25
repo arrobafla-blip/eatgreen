@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Composição de frutas, verduras e legumes frescos</title>
+<desc id="desc">Composição ilustrada de folhas verdes, tomates, pimentão amarelo, cenouras, abacate, laranja, pepino e uvas sobre fundo creme e verde.</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf2df"/><stop offset="1" stop-color="#dbe8c7"/></linearGradient>
+ <linearGradient id="bowl" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fffef6"/><stop offset="1" stop-color="#e9e5d1"/></linearGradient>
+ <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#75ad55"/><stop offset="1" stop-color="#1e633b"/></linearGradient>
+ <linearGradient id="tomato" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f77c50"/><stop offset="1" stop-color="#bd3528"/></linearGradient>
+ <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd06a"/><stop offset="1" stop-color="#ef8d27"/></linearGradient>
+ <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feGaussianBlur stdDeviation="24"/></filter>
+</defs>
+<rect width="1200" height="800" rx="48" fill="url(#bg)"/>
+<circle cx="1000" cy="170" r="190" fill="#c7dc91" opacity=".55"/>
+<circle cx="170" cy="690" r="210" fill="#f7f1df" opacity=".9"/>
+<path d="M0 590 Q300 510 570 610 T1200 560 V800 H0Z" fill="#f8f4e7"/>
+<ellipse cx="650" cy="690" rx="390" ry="54" fill="#334b2b" opacity=".16" filter="url(#shadow)"/>
+<!-- leafy greens -->
+<g fill="url(#leaf)">
+ <path d="M360 455C175 355 205 115 420 70c58 154 36 291-60 385Z"/>
+ <path d="M440 440C340 220 495 65 695 55c-3 177-94 319-255 385Z"/>
+ <path d="M560 435C520 220 700 95 875 140c-50 171-163 270-315 295Z"/>
+ <path d="M260 520C70 480 45 310 160 210c128 94 170 205 100 310Z"/>
+</g>
+<g stroke="#c8df9c" stroke-width="7" fill="none" opacity=".75"><path d="M386 440Q335 250 420 70"/><path d="M448 435Q468 220 695 55"/><path d="M565 432Q660 245 875 140"/><path d="M260 520Q235 340 160 210"/></g>
+<!-- bowl -->
+<path d="M255 475Q600 420 950 475L900 690Q600 800 305 690Z" fill="url(#bowl)" stroke="#d6ddc9" stroke-width="18"/>
+<ellipse cx="603" cy="477" rx="352" ry="65" fill="#fffdf2" stroke="#d6ddc9" stroke-width="17"/>
+<!-- pepper -->
+<path d="M790 390c-48-54-24-145 36-161 27-8 47 7 62 24 28-21 63-14 82 11 43 58 12 148-44 176-39 20-103-7-136-50Z" fill="#f3bd32" stroke="#d89a1d" stroke-width="8"/>
+<path d="M858 238q-9-44 24-61q27 18 11 61" fill="#427b3c" stroke="#285d36" stroke-width="9"/>
+<!-- tomato -->
+<g><circle cx="520" cy="415" r="91" fill="url(#tomato)" stroke="#bd4b35" stroke-width="7"/><path d="M520 327l-16-28 26 16 24-19-8 31 31 10-34 8-13 26-10-29-32-4Z" fill="#2f713c"/></g>
+<g><circle cx="680" cy="440" r="70" fill="url(#tomato)" stroke="#bd4b35" stroke-width="7"/><path d="M679 371l-13-24 22 12 20-14-8 25 25 8-27 7-12 21-9-23-26-3Z" fill="#2f713c"/></g>
+<!-- carrot -->
+<path d="M290 575Q420 495 555 525Q465 590 315 635Q280 630 290 575Z" fill="#ef963c"/>
+<path d="M320 585q105-35 195-49M340 605q95-29 160-38" stroke="#f9c06d" stroke-width="7" fill="none" stroke-linecap="round"/>
+<!-- avocado -->
+<path d="M690 520c-40-75 22-155 95-139 76 17 101 120 55 196-44 74-111 70-150-57Z" fill="#3d7847" stroke="#285e39" stroke-width="8"/>
+<path d="M720 520c-28-53 12-106 50-96 45 12 55 72 27 118-29 46-57 35-77-22Z" fill="#b9ce79"/>
+<circle cx="760" cy="526" r="28" fill="#8a4c2c"/>
+<!-- orange -->
+<circle cx="1000" cy="620" r="105" fill="url(#orange)" stroke="#e58b2d" stroke-width="8"/>
+<circle cx="1000" cy="620" r="80" fill="#ffdf87" stroke="#fff0bb" stroke-width="8"/>
+<g stroke="#ef9d39" stroke-width="7"><path d="M1000 540v160M920 620h160M944 564l112 112M1056 564L944 676"/></g>
+<circle cx="1000" cy="620" r="18" fill="#fff3d1"/>
+<!-- grapes and radish -->
+<g fill="#8eaa43" stroke="#6f9138" stroke-width="5"><circle cx="1100" cy="390" r="35"/><circle cx="1150" cy="430" r="34"/><circle cx="1090" cy="465" r="34"/><circle cx="1160" cy="500" r="34"/></g>
+<g fill="#e66d67" stroke="#c94c4b" stroke-width="6"><circle cx="880" cy="680" r="35"/><circle cx="945" cy="710" r="30"/><circle cx="1080" cy="730" r="28/></g>
+<g stroke="#477b3e" stroke-width="8" fill="none" stroke-linecap="round"><path d="M880 646q-2-40 22-51M945 681q10-34 37-42M1080 702q2-30 25-42"/></g>
+<!-- cucumber -->
+<path d="M160 635q-20-65 60-85l160-20q36 5 25 45l-28 70q-11 26-48 30l-130 4q-28-4-39-44Z" fill="#4d8c4d" stroke="#316f3c" stroke-width="8"/>
+<path d="M198 608q70-31 170-33" stroke="#b5d18a" stroke-width="12" fill="none" stroke-linecap="round"/>
+</svg>
