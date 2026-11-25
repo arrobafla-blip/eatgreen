@@ -4,3 +4,63 @@
 @media(max-width:800px){.site-header{height:68px}.menu-toggle{display:block}.main-nav{display:none;position:absolute;left:0;right:0;top:68px;background:var(--paper);padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:18px}.main-nav.open{display:flex}.main-nav .nav-cta{text-align:center}.hero{grid-template-columns:1fr;padding-top:55px;gap:35px}.hero-art{min-height:340px;grid-row:1}.hero-copy{grid-row:2}.hero h1{font-size:clamp(2.8rem,11vw,4.4rem)}.value-strip{grid-template-columns:1fr;gap:18px;padding-top:25px;padding-bottom:25px}.value-strip>div{justify-content:flex-start}.section-block{padding-top:65px;padding-bottom:65px}.section-heading{display:block}.section-intro{margin-top:20px}.plan-grid,.product-grid{grid-template-columns:1fr 1fr}.steps-grid{gap:18px}.order-inner{grid-template-columns:1fr;gap:30px;padding-top:60px;padding-bottom:60px}.contact-section{grid-template-columns:1fr;gap:25px}}
 @media(max-width:520px){.section-wrap{width:88%}.hero{padding-top:35px}.hero-art{min-height:290px}.bowl{transform:scale(.82) rotate(-7deg)}.art-label{top:25px;left:22px}.section-heading h2,.how-section h2,.contact-section h2,.order-inner h2{font-size:2.35rem}.plan-grid,.product-grid,.steps-grid{grid-template-columns:1fr}.filter-row{align-items:flex-start;flex-direction:column}.plan-card{min-height:unset}.site-footer{grid-template-columns:1fr}.site-footer p{text-align:left}.site-footer small{grid-column:auto}.hero-actions{align-items:flex-start;flex-direction:column;gap:16px}.order-card{padding:24px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Novas áreas comerciais */
+.product-grid-featured{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.product-grid-featured .product-card{min-height:100%}
+.product-options{list-style:none;padding:0;margin:0 0 14px;border-top:1px solid var(--line)}
+.product-options li{display:flex;justify-content:space-between;gap:12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.product-options span{font-weight:800;color:var(--forest)}
+.product-link{margin-top:12px;width:100%}
+.image-fallback{background:linear-gradient(135deg,#dce8c9,#f6f3e7);position:relative}
+.image-fallback:after{content:"Feirinha Hortejo";font:800 1.35rem Manrope,sans-serif;color:var(--forest)}
+.image-salad{background:linear-gradient(135deg,#d9e8c9,#f7f2df);position:relative}
+.image-salad:after{content:"🥗";font-size:5rem}
+.image-fruit{background:linear-gradient(135deg,#f6e6c6,#dbe9c9);position:relative}
+.image-fruit:after{content:"🍊 🍇";font-size:3.4rem}
+.image-kits{background:linear-gradient(135deg,#dce8c9,#f2e7cf);position:relative}
+.image-kits:after{content:"🥬 🥕";font-size:3.4rem}
+.audience-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.audience-card{padding:32px;border:1px solid var(--line);border-radius:var(--radius);background:#fff;transition:transform .2s,border-color .2s}
+.audience-card:hover{transform:translateY(-3px);border-color:#a9bd9b}
+.audience-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#e5edd9;color:var(--forest);font-size:1.4rem}
+.audience-card h3{font:800 1.45rem Manrope,sans-serif;color:var(--forest);margin:22px 0 8px}
+.audience-card p{color:var(--muted);max-width:430px}
+.audience-more{font-weight:700;color:var(--green);font-size:.86rem}
+.business-section{background:var(--cream)}
+.business-intro{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center}
+.business-intro h2,.institution-section h2,.proposal-layout h2,.about-section h2{font:800 clamp(2.2rem,4vw,3.6rem)/1.08 Manrope,sans-serif;letter-spacing:-.055em;color:var(--forest);margin:0 0 20px}
+.business-intro p,.institution-layout p,.about-section p,.proposal-layout>div>p{color:var(--muted);line-height:1.8}
+.business-highlight{font:italic 600 1.4rem/1.5 Manrope,sans-serif;color:var(--green);padding:25px;border-left:3px solid var(--lime)}
+.subheading{font:800 1.5rem Manrope,sans-serif;color:var(--forest);margin:55px 0 22px}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.service-grid article{padding:22px 18px;background:white;border-radius:16px;border:1px solid #e5e8dc}
+.service-grid article>span{font:800 1rem Manrope,sans-serif;color:var(--green)}
+.service-grid h3{font:800 1.05rem Manrope,sans-serif;color:var(--forest);margin:16px 0 8px}
+.service-grid p{font-size:.84rem;color:var(--muted);margin:0}
+.guarantees{margin:30px 0;padding:25px 30px;border-radius:18px;background:var(--forest);color:white;display:flex;align-items:center;gap:35px}
+.guarantees strong{font:800 1.25rem Manrope,sans-serif;min-width:180px}
+.guarantees ul{margin:0;padding-left:20px;columns:2;line-height:1.9;color:#e0ead9}
+.institution-section{background:#e9eedc}
+.institution-section h2{max-width:850px;margin-bottom:35px}
+.institution-layout{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.institution-lead{font:600 1.2rem Manrope,sans-serif;color:var(--forest)!important}
+.institution-points{background:#f9f8ef;border-radius:20px;padding:28px}
+.institution-points h3{font:800 1.25rem Manrope,sans-serif;color:var(--forest)}
+.institution-points ul{padding-left:20px;color:var(--muted);line-height:1.9}
+.institution-cta{margin-top:30px;background:var(--forest);color:white;border-radius:20px;padding:28px 32px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+.institution-cta p{font:700 1.2rem Manrope,sans-serif;margin:0;max-width:540px}
+.institution-cta .button{width:auto;white-space:nowrap}
+.about-section{display:grid;grid-template-columns:.9fr 1.1fr;gap:55px;align-items:center}
+.proposal-section{background:var(--cream)}
+.proposal-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.proposal-note{padding:18px 20px;background:#e7eddc;border-radius:14px;color:var(--forest);font-size:.85rem;margin-top:25px}
+.proposal-form{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px;display:grid;gap:16px}
+.proposal-form label{display:grid;gap:7px;font-size:.8rem;font-weight:700;color:var(--forest)}
+.proposal-form input,.proposal-form select,.proposal-form textarea{width:100%;border:1px solid #d9e0d4;border-radius:10px;padding:12px 13px;background:#fffefb;color:var(--ink);font:400 .9rem 'DM Sans',sans-serif}
+.proposal-form input:focus,.proposal-form select:focus,.proposal-form textarea:focus{outline:2px solid #b6cb9d;border-color:var(--green)}
+.form-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.form-feedback{font-size:.76rem;color:var(--muted);margin:0}
+.form-warning{color:#8b5b20}
+@media(max-width:800px){.product-grid-featured{grid-template-columns:1fr 1fr}.business-intro,.institution-layout,.about-section,.proposal-layout{grid-template-columns:1fr;gap:28px}.service-grid{grid-template-columns:repeat(2,1fr)}.guarantees{align-items:flex-start;flex-direction:column;gap:10px}.institution-cta{align-items:flex-start;flex-direction:column}.institution-cta .button{width:100%}}
+@media(max-width:520px){.product-grid-featured,.audience-grid,.service-grid,.form-two{grid-template-columns:1fr}.proposal-form{padding:22px}.guarantees ul{columns:1}.business-highlight{font-size:1.15rem}}
