@@ -1,4 +1,4 @@
-const CACHE_NAME = "eat-green-v1";
+const CACHE_NAME = "eat-green-v2";
 const APP_FILES = [
   "./",
   "./index.html",
