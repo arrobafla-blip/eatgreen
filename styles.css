@@ -99,3 +99,7 @@ input,textarea,select,[contenteditable="true"]{cursor:text}
 .feirinha-option summary:after{display:none}
 .feirinha-option[open] summary{border-bottom:1px solid var(--line)}
 @media(max-width:380px){.kit-summary-action{font-size:0;gap:0}.kit-summary-action b{font-size:1.1rem}}
+
+/* Alinhamento dos nomes e ícones dos kits à esquerda */
+.kit-summary-main strong{display:flex;align-items:center;justify-content:flex-start;gap:8px;text-align:left}
+.kit-summary-main .kit-icon{margin-left:0;font-size:1.15rem;line-height:1;flex:0 0 auto}
