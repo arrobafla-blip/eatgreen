@@ -64,3 +64,13 @@
 .form-warning{color:#8b5b20}
 @media(max-width:800px){.product-grid-featured{grid-template-columns:1fr 1fr}.business-intro,.institution-layout,.about-section,.proposal-layout{grid-template-columns:1fr;gap:28px}.service-grid{grid-template-columns:repeat(2,1fr)}.guarantees{align-items:flex-start;flex-direction:column;gap:10px}.institution-cta{align-items:flex-start;flex-direction:column}.institution-cta .button{width:100%}}
 @media(max-width:520px){.product-grid-featured,.audience-grid,.service-grid,.form-two{grid-template-columns:1fr}.proposal-form{padding:22px}.guarantees ul{columns:1}.business-highlight{font-size:1.15rem}}
+
+/* Hero com composição de frutas e vegetais */
+.hero-produce{min-height:400px;padding:0;background:#eaf0dd;border-radius:48% 48% 25px 25px;overflow:hidden;display:block;box-shadow:inset 0 0 0 1px rgba(39,83,49,.04)}
+.hero-produce img{display:block;width:100%;height:100%;min-height:400px;object-fit:cover;object-position:center}
+@media(max-width:700px){.hero-produce,.hero-produce img{min-height:300px}}
+/* Cursor personalizado: pequena folha inspirada na alface */
+:root{--leaf-cursor:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cpath d='M5 29C5 12 17 3 31 4c1 14-7 26-24 25Z' fill='%234b8b42' stroke='%23173f2b' stroke-width='1.6'/%3E%3Cpath d='M7 28Q18 17 28 7M13 22l-1-8m6 2 5-7m-1 15 8-1' fill='none' stroke='%23dce9b7' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") 5 5, auto}
+html,body{cursor:var(--leaf-cursor)}
+a,button,[role="button"],input[type="submit"]{cursor:var(--leaf-cursor)}
+input,textarea,select,[contenteditable="true"]{cursor:text}
